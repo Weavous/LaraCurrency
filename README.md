@@ -113,6 +113,20 @@ Next, add the following database configuration information
     php artisan make:test JWTAuthTest
 ```
 
+<h6 align="center">Frontend</h6>
+
+```bash
+    vue init webpack-simple frontend
+```
+
+```bash
+    npm	install	axios --save
+```
+
+```bash
+    npm install vue-router --save
+```
+
 <h6>⚠️ Atenção - Possívels Erros</h6>
 
 * A porta esperada para enviar as requisições é `8000`, se outra for estabelecida, alterar o conteúdo de `baseURL` em `frontend\src\services\http.js`.
