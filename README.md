@@ -78,6 +78,27 @@
     composer create-project laravel/laravel backend
 ```
 
+<h6 align="center">Storage</h6>
+
+```sql
+    CREATE DATABASE custom_webquarto_laravel_currency_application;
+```
+
+Next, add the following database configuration information
+
+```txt
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=<database-name>
+    DB_USERNAME=<database-username>
+    DB_PASSWORD=<database-password>
+```
+
+<h6 align="center">JWT Guide Link<a href="https://www.avyatech.com/rest-api-with-laravel-8-using-jwt-token">🔐</a></h6>
+
+<p align="center">Guide link to implement JSON Web Token (JWT) authentication</p>
+
 <h6 align="center">Launch 🚀</h6>
 
 ```bash
@@ -85,6 +106,12 @@
 ```
 
 * Open `127.0.0.1:8000` in any browser.
+
+<h6 align="center"></h6>
+
+```bash
+    php artisan make:test JWTAuthTest
+```
 
 <h6>⚠️ Atenção - Possívels Erros</h6>
 
