@@ -95,6 +95,10 @@ Next, add the following database configuration information
     DB_PASSWORD=<database-password>
 ```
 
+<h6 align="center">JWT Guide Link<a href="https://www.avyatech.com/rest-api-with-laravel-8-using-jwt-token">🔐</a></h6>
+
+<p align="center">Guide link to implement JSON Web Token (JWT) authentication</p>
+
 <h6 align="center">Launch 🚀</h6>
 
 ```bash
@@ -102,6 +106,12 @@ Next, add the following database configuration information
 ```
 
 * Open `127.0.0.1:8000` in any browser.
+
+<h6 align="center"></h6>
+
+```bash
+    php artisan make:test JWTAuthTest
+```
 
 <h6>⚠️ Atenção - Possívels Erros</h6>
 
