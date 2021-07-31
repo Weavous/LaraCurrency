@@ -127,6 +127,8 @@ Next, add the following database configuration information
     npm install vue-router --save
 ```
 
+<p align="center">4 folder structures to organize your React & React Native project <a href="https://reboot.studio/blog/folder-structures-to-organize-react-project">💾</a></p>
+
 <h6>⚠️ Atenção - Possívels Erros</h6>
 
 * A porta esperada para enviar as requisições é `8000`, se outra for estabelecida, alterar o conteúdo de `baseURL` em `frontend\src\services\http.js`.
