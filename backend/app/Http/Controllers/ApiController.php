@@ -49,7 +49,7 @@ class ApiController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json(['error' => json_decode($validator->errors()->toJson())], 200)->setEncodingOptions(JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            return response()->json(['success' => false, 'error' => json_decode($validator->errors()->toJson())], 200)->setEncodingOptions(JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
         }
 
         try {

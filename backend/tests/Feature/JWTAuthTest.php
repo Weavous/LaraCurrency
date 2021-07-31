@@ -120,8 +120,13 @@ class JWTAuthTest extends TestCase
             "token" => json_decode($login->getContent())->token
         ]);
 
+        $resource = $this->get("api/config", [], [
+            "Authorization" => sprintf("Bearer %s", json_decode($login->getContent())->token),
+        ]);
+
         $this->assertEquals($login->status(), 200);
         $this->assertEquals($logout->status(), 200);
+        $this->assertEquals($resource->status(), 401);
 
         $this->assertTrue(json_decode($login->getContent())->success);
         $this->assertTrue(json_decode($logout->getContent())->success);
