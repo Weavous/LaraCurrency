@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Tymon\JWTAuth\Facades\JWTAuth;
 use App\Models\User;
-use Illuminate\Http\Request;
+
+use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
+
 use Symfony\Component\HttpFoundation\Response;
-use Illuminate\Support\Facades\Validator;
+
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ApiController extends Controller
 {
