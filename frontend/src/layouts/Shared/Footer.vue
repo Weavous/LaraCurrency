@@ -2,17 +2,17 @@
   <footer class="footer mt-auto py-3 bg-light fixed-bottom">
     <div class="container d-flex justify-content-center">
       <span class="text-muted">
-        {{  `Copyright @${new Date().getFullYear()} LaraVueMarvel All Rights Reserved` }}
+        <TradeMark></TradeMark>
       </span>
     </div>
   </footer>
 </template>
 
 <script>
+import TradeMark from "../../components/DOM/TradeMark.vue";
+
 export default {
   name: "Footer",
-  data() {
-    return {};
-  },
+  components: { TradeMark },
 };
 </script>
