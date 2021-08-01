@@ -99,19 +99,13 @@ Next, add the following database configuration information
 
 <p align="center">Guide link to implement JSON Web Token (JWT) authentication</p>
 
-<h6 align="center">Launch 🚀</h6>
-
-```bash
-    php artisan serve
-```
-
-* Open `127.0.0.1:8000` in any browser.
-
-<h6 align="center"></h6>
+<h6 align="center">Tests</h6>
 
 ```bash
     php artisan make:test JWTAuthTest
 ```
+
+<span>Edit `backend\phpunit.xml`, setting `DB_CONNECTION` and `DB_DATABASE` values</span>
 
 <h6 align="center">Frontend</h6>
 
@@ -125,6 +119,54 @@ Next, add the following database configuration information
 
 ```bash
     npm install vue-router --save
+```
+
+<h6 align="center">Launch 🚀</h6>
+
+```bash
+    git clone https://github.com/Weavous/LaraVueCurrency
+```
+
+```bash
+    cd LaraVueCurrency
+```
+
+<h6 align="center">Set up Backend Application 🚀</h6>
+
+```bash
+    cd backend
+```
+
+```bash
+    cp .env.example .env
+```
+
+<span>You must specify the environment configuration in `.env` file</span>
+
+```bash
+    composer i
+```
+
+```bash
+    php artisan key:generate
+```
+
+```bash
+    php artisan serve
+```
+
+<h6 align="center">Set up Frontend Application 🚀</h6>
+
+```bash
+    cd frontend
+```
+
+```bash
+    npm i
+```
+
+```bash
+    npm run dev
 ```
 
 <p align="center">4 folder structures to organize your React & React Native project <a href="https://reboot.studio/blog/folder-structures-to-organize-react-project">💾</a></p>
