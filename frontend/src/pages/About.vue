@@ -1,17 +1,14 @@
 <template>
+  <Main>
     <div>About</div>
+  </Main>
 </template>
 
 <script>
-    export default {
-        name: "About",
-        mounted() {
-            console.log("here...");
-        }
-    }
+import Main from "../layouts/Main/Main.vue";
+
+export default {
+  name: "About",
+  components: { Main },
+};
 </script>
-
-
-<style>
-
-</style>

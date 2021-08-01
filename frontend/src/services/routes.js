@@ -1,9 +1,9 @@
 import VueRouter from 'vue-router';
 
-import Home from '../../pages/Home.vue';
-import About from '../../pages/About.vue';
-import Currency from '../../pages/Currency.vue';
-import Profile from '../../pages/Profile.vue';
+import About from '../pages/About.vue';
+import Currency from '../pages/Currency.vue';
+import Home from '../pages/Home.vue';
+import Profile from '../pages/Profile.vue';
 
 export default new VueRouter({
     mode: "history",

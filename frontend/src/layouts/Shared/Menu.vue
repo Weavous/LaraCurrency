@@ -7,12 +7,15 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item">
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/currencies">Currencies</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/about">About</router-link>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -27,13 +30,13 @@
 
                   <ul class="dropdown-menu dropdown-menu-light bg-light">
                     <li>
-                      <a class="dropdown-item border-bottom" href="/register">Register</a>
+                      <router-link class="dropdown-item border-bottom" to="/register">Register</router-link>
                     </li>
                     <li>
-                      <a class="dropdown-item border-bottom" href="/login">Login</a>
+                      <router-link class="dropdown-item border-bottom" to="/login">Login</router-link>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="/logout">Logout</a>
+                      <router-link class="dropdown-item" to="/logout">Logout</router-link>
                     </li>
                   </ul>
                 </div>
@@ -47,13 +50,10 @@
 </template>
 
 <script>
-import CurrencyBagLogo from "../components/CurrencyBagLogo.vue";
+import CurrencyBagLogo from "../../components/DOM/CurrencyBagLogo.vue";
 
 export default {
   name: "Menu",
-  data() {
-    return {};
-  },
   components: {CurrencyBagLogo}
 };
 </script>

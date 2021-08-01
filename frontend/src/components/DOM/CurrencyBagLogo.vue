@@ -1,5 +1,5 @@
 <template>
-  <img class="img-responsive" src="../assets/cartoon-money-bag.png" alt="Currency Bag Logo">
+  <img class="img-responsive" src="../../assets/cartoon-money-bag.png" alt="Currency Bag Logo">
 </template>
 
 <script>
