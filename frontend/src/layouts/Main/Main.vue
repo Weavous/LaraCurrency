@@ -1,7 +1,9 @@
 <template>
   <div>
     <Menu></Menu>
-    <slot></slot>
+    <div class="container">
+      <slot></slot>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -12,9 +14,6 @@ import Footer from "../Shared/Footer.vue";
 
 export default {
   name: "Main",
-  data() {
-    return {};
-  },
   components: { Menu, Footer },
 };
 </script>
