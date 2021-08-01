@@ -1,18 +1,21 @@
 <template>
-  <div id="app">
-    <div>Menu</div>
+  <div>
+    <Menu></Menu>
     <router-view class="container"></router-view>
-    <div>Footer</div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Menu from "../features/Menu.vue";
+import Footer from "../features/Footer.vue";
 
 export default {
-  name: "app",
+  name: "Template",
   data() {
     return {};
-  }
+  },
+  components: { Menu, Footer },
 };
 </script>
 
