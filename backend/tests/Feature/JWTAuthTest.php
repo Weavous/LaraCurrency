@@ -98,7 +98,7 @@ class JWTAuthTest extends TestCase
             "password" => "anthonieta-password"
         ]);
 
-        $response = $this->get("api/currencies/uniques", [
+        $response = $this->post("api/currencies/uniques", [], [
             "Authorization" => sprintf("Bearer %s", json_decode($response->getContent())->token)
         ]);
 
@@ -123,7 +123,7 @@ class JWTAuthTest extends TestCase
             "token" => json_decode($login->getContent())->token
         ]);
 
-        $resource = $this->get("api/currencies/uniques", [], [
+        $resource = $this->post("api/currencies/uniques", [], [
             "Authorization" => sprintf("Bearer %s", json_decode($login->getContent())->token),
         ]);
 

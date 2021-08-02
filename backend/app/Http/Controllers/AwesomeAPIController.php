@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\AwesomeAPI\Contracts\ExchangeRate;
 use App\Services\AwesomeAPI\Implementations\AwesomeAPI;
 
 use Illuminate\Http\JsonResponse;
@@ -45,12 +44,12 @@ class AwesomeAPIController extends Controller
         $validator = Validator::make($data, [
             'name' => 'required|string|regex:/^[A-Z]{3,}-[A-Z]{3,}$/i',
             'quantity' => 'required|string',
-            'begin' => 'required|string|size:13',
-            'end' => 'required|string|size:13'
+            'begin' => 'required|int',
+            'end' => 'required|int'
         ]);
 
         if ($validator->fails()) {
-            return new Response(false, new stdclass);
+            return response()->json((new Response(false, new stdclass))->data());
         }
 
         $exchange = new Exchange($request->name, $request->quantity, $request->begin, $request->end);
