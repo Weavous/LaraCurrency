@@ -105,6 +105,12 @@ Next, add the following database configuration information
     php artisan make:controller AwesomeAPIController
 ```
 
+<h6 align="center">Seeders</h6>
+
+```bash
+    php artisan make:seeder UserSeeder
+```
+
 <h6 align="center">Tests</h6>
 
 ```bash
@@ -158,6 +164,10 @@ Next, add the following database configuration information
 ```
 
 ```bash
+    php artisan migrate:fresh --seed
+```
+
+```bash
     php artisan serve
 ```
 
@@ -173,6 +183,15 @@ Next, add the following database configuration information
 
 ```bash
     npm run dev
+```
+
+<h6 align="center">Example User</h6>
+
+```typescript
+    return {
+        email: "johndoe@example.com",
+        password: "secret"
+    }
 ```
 
 <p align="center">4 folder structures to organize your React & React Native project <a href="https://reboot.studio/blog/folder-structures-to-organize-react-project">💾</a></p>
