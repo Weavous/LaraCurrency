@@ -99,6 +99,12 @@ Next, add the following database configuration information
 
 <p align="center">Guide link to implement JSON Web Token (JWT) authentication</p>
 
+<h6 align="center">Controllers</h6>
+
+```bash
+    php artisan make:controller AwesomeAPIController
+```
+
 <h6 align="center">Tests</h6>
 
 ```bash
