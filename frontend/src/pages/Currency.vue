@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div v-if="auth.isAuth === false">
+      <div v-if="auth.isAuth === true">
         <div class="m-3">
           <div class="row">
             <div class="col-md-3">
@@ -109,9 +109,6 @@ export default {
       table: []
     };
   },
-  mounted() {
-    this.getAllCurrency();
-  },
   methods: {
     getJWTAuthToken() {
       const response = auth.login(this.auth.user);
@@ -122,6 +119,8 @@ export default {
             if (data.data.success === true) {
               this.auth.jwt = data.data.token;
               this.auth.isAuth = true;
+
+              this.getAllCurrency();
             } else {
               console.error(data.data.error);
             }
