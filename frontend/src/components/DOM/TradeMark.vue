@@ -1,5 +1,5 @@
 <template>
-  <span>{{ `Copyright @${new Date().getFullYear()} LaraVueMarvel All Rights Reserved` }}</span>
+  <span>{{ `Copyright @${new Date().getFullYear()} LaraVueCurrency All Rights Reserved` }}</span>
 </template>
 
 <script>
