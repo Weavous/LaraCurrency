@@ -34,8 +34,8 @@ Route::prefix('auth')->group(function () {
 
 Route::group(['middleware' => ['jwt.verify']], function () {
     Route::prefix('currencies')->group(function () {
-        Route::get('uniques', [AwesomeAPIController::class, 'uniques']);
-        Route::get('combinations', [AwesomeAPIController::class, 'combinations']);
+        Route::post('uniques', [AwesomeAPIController::class, 'uniques']);
+        Route::post('combinations', [AwesomeAPIController::class, 'combinations']);
     });
 
     Route::post('exchanges', [AwesomeAPIController::class, 'exchanges']);
