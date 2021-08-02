@@ -2,11 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+
 use App\Http\Controllers\ApiController;
-use App\Models\User;
+use App\Http\Controllers\AwesomeAPIController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,10 +33,10 @@ Route::prefix('auth')->group(function () {
 });
 
 Route::group(['middleware' => ['jwt.verify']], function () {
-    Route::get('config', function (Request $request, Response $response) {
-        return response()->json([
-            'status' => true,
-            'timestamp' => now()
-        ]);
+    Route::prefix('currencies')->group(function () {
+        Route::get('uniques', [AwesomeAPIController::class, 'uniques']);
+        Route::get('combinations', [AwesomeAPIController::class, 'combinations']);
     });
+
+    Route::post('exchanges', [AwesomeAPIController::class, 'exchanges']);
 });
